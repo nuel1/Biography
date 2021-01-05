@@ -1,0 +1,31 @@
+// Importing map for catching nested variables
+@use "sass:map";
+@use "sass:string";
+
+$theme-color:(
+    "bg-primary": #000000,
+    "bg-secondary": #070707,
+    "color-primary":#C1C1C1,
+    "orange": #FF6E00,
+    "dim-orange":#E9500E,
+);
+@mixin  flex($cols, $mrgs) {
+    margin-right:$mrgs;
+    margin-bottom: $mrgs;
+    &:nth-child(#{$cols}){
+        margin-right:0;
+    }
+    width: ((100% - ($cols - 1 * $mrgs)) / $cols);
+}
+@mixin responsive($value...) {
+    @if length($value) == 1{
+        @media only screen and (min-width: nth($value, 1)) {
+            @content;
+        }
+    }
+    @if length($value) == 2{
+        @media only screen and (min-width: nth($value, 1)) and (max-width: nth($value, 2)) {
+            @content;
+        }
+    }
+}

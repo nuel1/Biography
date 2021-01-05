@@ -1,0 +1,7 @@
+@use "sass:map";
+@import 'font-family';
+@import 'reset';
+@import 'variable';
+body{
+    background: map.get($theme-color, "bg-primary");
+}
