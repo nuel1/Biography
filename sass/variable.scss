@@ -1,5 +1,4 @@
 // Importing map for catching nested variables
-@use "sass:map";
 @use "sass:string";
 
 $theme-color:(
@@ -8,11 +7,12 @@ $theme-color:(
     "color-primary":#C1C1C1,
     "orange": #FF6E00,
     "dim-orange":#E9500E,
+    "white": #ffff
 );
 @mixin  flex($cols, $mrgs) {
     margin-right:$mrgs;
     margin-bottom: $mrgs;
-    &:nth-child(#{$cols}){
+    &:nth-child(#{$cols}n){
         margin-right:0;
     }
     width: ((100% - ($cols - 1 * $mrgs)) / $cols);
@@ -28,4 +28,19 @@ $theme-color:(
             @content;
         }
     }
+}
+@mixin  mobileContainerWidth {
+    width:92%;
+}
+@mixin mobileContainerWidth__Adjust{
+    width: 89%;
+}
+@mixin tabletContainerWidth {
+    width: 85%;
+}
+@mixin desktopContainerWidth {
+    width:80%;
+}
+@mixin  pageMaxWidth {
+    max-width:1240px;
 }

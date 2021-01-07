@@ -1,3 +1,5 @@
+@use 'sass:map';
+@import 'variable';
 // General Settings
 html{
     box-sizing: border-box;
@@ -45,8 +47,12 @@ h3{
 h4{
     font-size:1.2em;
 }
-h1,h2,h3,h4,h5,h6,p,a{
-    // color:
+p, q{
+    line-height: 32px;
+}
+h1,h2,h3,h4,h5,h6,p,a,q{
+    color:map.get($theme-color,"color-primary");
+    font-family: Barlow, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 blockquote{
     padding: 0;

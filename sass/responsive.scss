@@ -1,0 +1,297 @@
+@use 'sass:map';
+// Screen of 430px resolution and higher
+@include responsive(430px){
+    .container{
+        @include mobileContainerWidth__Adjust;
+    }
+    article{
+        .dsply-flex{
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+    article{
+        .box{
+            @include flex(2, 1%);
+        }
+    }
+    aside{
+       blockquote{
+           padding-left: 40px;
+           padding-right: 40px;
+       }
+    }
+    .banner-img-wrapper{
+        width:280px;
+    }
+}
+@include responsive(550px){
+    .container{
+        @include tabletContainerWidth;
+    }
+    .banner-content-wrapper{
+        h1{
+            font-size:2.1em;
+        }
+    }
+    aside{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .banner-img-wrapper{
+        width:300px;
+    }
+}
+@include responsive(609px){
+    aside{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .logo-wrapper{
+        width: 230px;
+    }
+    section.footer-section{
+        .dsply-flex-flex{
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+    section.footer-section{
+        .bg-box{
+            @include flex(2,1%);
+        }
+    }
+}
+@include responsive(709px){
+    aside{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    .banner-img-wrapper{
+        width:330px;
+    }
+    aside{
+        .img-container{
+            width:250px;
+        }
+    }
+}
+@include responsive(720px){
+    article{
+        .dsply-flex{
+            .box{
+                @include flex(3, 2%);
+            }
+        }
+    }
+}
+@include responsive(780px){
+    .banner-content-wrapper{
+        h1{
+            font-size:2.8em;
+        }
+        h3{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+    aside{
+        margin-right: 55px;
+        margin-left: 55px;
+    }
+}
+@include responsive(880px){
+    .container{
+        @include  desktopContainerWidth;
+    }
+}
+@include responsive(1100px){
+    .container{
+        width: 97%;
+    }
+    .top-header{
+        justify-content: flex-start;
+    }
+    .logo-wrapper{
+        margin:0;
+    }
+    header.base-header{
+        padding: 0;
+        margin: 50px 0;
+        .header-banner{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+    header.base-header{
+        .banner-description-cover{
+            flex:1 0 40%;
+            padding: 0;
+        }
+    }
+    header.base-header{
+        .hero-banner{
+            flex:60%;
+            margin-right: -90px;
+            background: transparent;
+            padding: 0;
+        }
+    }
+    header.base-header{
+        .banner-img-cover{
+            width:100%;
+            padding: 0;
+        }
+    }
+    header.base-header{
+        .banner-content-wrapper{
+            display: block;
+            h1,h3{
+                text-align: left;
+                padding: 0;
+            }
+            h1{
+                font-size: 3.8rm;
+            }
+            h3{
+                padding-right:15px;
+            }
+        }
+    }
+    header.base-header{
+        .banner-img-wrapper{
+            width: 100%;
+            padding: 0;
+        }
+    }
+    header.base-header{
+        .bg-touch{
+            position: absolute;
+            transform: rotate(20deg);
+            width:50%;
+            margin-left: -650px;
+            height: 50%;
+            bottom: -40px;
+            background: map.get($theme-color,"orange");
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+    }
+    header.base-header{
+        .main-bio-name{
+            transform: rotate(-20deg);
+            margin-right: 80px;
+            margin-top:70px;
+            border-color: white;
+        }
+    }
+    header.base-header{
+        .pos-abt{
+            line-height: 36px;
+            h1{
+                font-size:2.7em;
+            }
+            p{
+                font-size:1.2rem;
+            }
+            h1,p{
+                color:map.get($theme-color,"white");
+            }
+        }
+    }
+    section.main-section{
+        display: flex;
+    }
+    article{
+        flex:1 0 70%;
+    }
+    aside{
+        flex:1 0 30%;
+        margin: 0;
+    }
+    aside{
+        .aside-container{
+            width:100%;
+            background: transparent;
+            border-right-width: 2px;
+            border-right-color: map.get($theme-color,"orange");
+            padding-left:10px;
+            display: block;
+        }
+    }
+    aside{
+        .img-container{
+            width: 100%;
+        }
+    }
+    aside{
+        blockquote{
+            padding:10px 0;
+        }
+    }
+    aside{
+        q{
+            text-align: left;
+            color:map.get($theme-color,"white");
+            font-style: italic;
+            font-size: 15px;
+        }
+    }
+    aside{
+        .border-line{
+            display: none;
+        }
+    }
+    aside{
+        span#quoter-name{
+            text-align: left;
+            margin-bottom: 5px;
+        }
+    }
+    section.footer-section{
+        .dsply-flex-flex{
+            .bg-box{
+                @include flex(3,2%);
+            }
+        }
+    }
+    header.section-header{
+        .line-touch{
+            width: 65px;
+            margin: 5px auto;
+            display: flex;
+            justify-content: space-between;
+            .cl{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: map.get($theme-color,  "dim-orange");
+            }
+        }
+    }
+
+
+    // ********************
+    // Adjust paragraph line height
+    // ********************
+    article{
+        p{
+            line-height: 36px;
+            font-size:.98rem;
+        }
+    }
+}
+@include responsive(1172px){
+    header.base-header{
+        .bg-touch{
+            margin-left: -690px;
+        }
+    }
+}
