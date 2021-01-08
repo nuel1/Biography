@@ -591,12 +591,18 @@ footer {
   }
 
   aside .aside-container {
-    width: 100%;
     background: transparent;
-    border-right-width: 2px;
-    border-right-color: #FF6E00;
-    padding-left: 10px;
     display: block;
+    width: 100%;
+  }
+  aside .aside-content {
+    border-style: solid;
+    border-left-width: 4px;
+    border-left-color: orange;
+    padding-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 10px;
   }
 
   aside .img-container {
@@ -647,7 +653,7 @@ footer {
 
   article p {
     line-height: 36px;
-    font-size: 0.98rem;
+    font-size: 0.1 0.1rem;
   }
 }
 @media only screen and (min-width: 1172px) {

@@ -218,12 +218,18 @@
     }
     aside{
         .aside-container{
-            width:100%;
             background: transparent;
-            border-right-width: 2px;
-            border-right-color: map.get($theme-color,"orange");
-            padding-left:10px;
             display: block;
+            width:100%;
+        }
+        .aside-content{
+            border-style: solid;
+            border-left-width: 4px;
+            border-left-color: orange;
+            padding-left:10px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius:5px;
+            margin-top: 10px;
         }
     }
     aside{
@@ -284,7 +290,7 @@
     article{
         p{
             line-height: 36px;
-            font-size:.98rem;
+            font-size:.1.1rem;
         }
     }
 }
